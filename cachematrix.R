@@ -1,6 +1,5 @@
-# Caching matrix function
+# create a matrix function capable of caching it's inverse
 # solve(A)	Inverse of A where A is a square matrix.
-
 makeCacheMatrix <- function(x = matrix()) {
   result <- NULL
   #setter
@@ -18,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getSolve = getSolve)  
 }
 
-
+# special version  of the solve (inverse) function that checks if the result is cached and returns it, or, solves and computes it
 cacheSolve <- function(x, ...) {
   # check cache
   result <- x$getSolve()
